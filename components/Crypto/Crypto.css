@@ -1,0 +1,43 @@
+.Crypto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    /* background-image: linear-gradient(to right,rgb(144, 91, 91), #FAFAFA); */
+    background-color: antiquewhite;
+    color: #000;
+    margin-top: 15px;
+    box-shadow: 0 0 5px black;
+}
+
+.paragraf-1{
+    height: 20px;
+    width: 100px;
+}
+.paragraf-2{
+    height: 20px;
+    width: 20px;
+}
+#btn{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+}
+.read-more-read-less{
+    font-size: 18px;
+    width: 50%;
+    color: #000;
+}
+.toggleButton{
+    outline: none;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    box-shadow: 0px 0px 5px 1px -1px grey;
+    margin-left: 20px;
+}
+
+.Crypto:hover{
+    background-color: #FAFAFA;
+    transition: 0.5s;
+}
