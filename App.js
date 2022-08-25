@@ -1,15 +1,12 @@
-
-import Greeting from './components/Greeting/Greeting';
-import { useState } from 'react'
 import React from 'react'
-import CryptoList from './components/Crypto/CryptoList'
 import "./App.css"
+import WeatherCard from './components/Weather/WeatherCard'
 
 
 function App(){
   return (
    <div className='card-container'>
-      <CryptoList />
+      <WeatherCard description/>
    </div>
   )
 };
