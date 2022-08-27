@@ -1,0 +1,29 @@
+.title-class{
+    max-width: 100px;
+    height: max-content;
+}
+.posts-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.post{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: max-content;
+}
+.btn-class{
+    height: 30px;
+    width: 50px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
+.title-class{
+    max-width: 100px;
+    height: max-content;
+}
