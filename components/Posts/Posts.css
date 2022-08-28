@@ -8,13 +8,14 @@
     align-items: center;
     width: 1000px;
     flex-direction: column;
-    border: 1px solid black;
+    box-shadow: 0px 0px 10px grey;
+    background-color: antiquewhite;
 }
-.post{
+.post-in{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    width: max-content;
 }
 .btn-class{
     height: 30px;

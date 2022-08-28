@@ -7,29 +7,29 @@ export default function Posts() {
 
     const [post, setPost] = useState([]);
 
-    const getPost = (id) => {
-        fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    const getPost = () => {
+        fetch(`https://jsonplaceholder.typicode.com/posts/`)
         .then((response) => response.json())
         .then((json) => {
             console.log(json)
-            setPost((prev) => [ ...prev ,{id: json.id, title:json.title} ])
+            setPost(json)
         })
     }
 
     useEffect(() => {
-        getPost(1)
+        getPost()
     }, [])
 
             return (
                 <div className='posts-container'>
-                <button className="btn-class" onClick={() => getPost(Math.floor(Math.random() * 90))}>CHANGE POST</button>
+                {/* <button className="btn-class" onClick={() => getPost(Math.floor(Math.random() * 90))}>CHANGE POST</button> */}
                 <p>Posts List</p>
-                <div className='post'>
+                <div className='post-in'>
                 {post.map((el) => (
                 <div key={el.id}>
                 <Post 
-                id={el.id}
-                title={el.title}/>
+                title={el.title}
+                description={el.body}/>
                 </div>
                 ))}
             </div>

@@ -2,12 +2,11 @@ import React from 'react'
 import './Post.css'
 
 
-export default function Post({ id , title , type }) {
+export default function Post({ title , description }) {
     return (
     <div className='post'>
-        <p>{id}</p>
         <p className='title-class'>{title}</p>
-        <p>{type}</p>
+        <p>{description}</p>
     </div>
     )
 }

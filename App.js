@@ -4,7 +4,7 @@ import Posts from './components/Posts/Posts'
 
 export default function App() {
   return (
-    <div>
+    <div className='card-container'>
       <Posts />
     </div>
   )

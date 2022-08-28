@@ -2,11 +2,18 @@
     border: 1px solid black;
     width: 500px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid orange;
+    background-color: rgb(247, 212, 149);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px black
 }
 .title-class{
-    max-width: 100px;
+    max-width: 200px;
     height: max-content;
-    border: 1px solid black;
+    font-weight: 500;
+    text-shadow: 0px 0px 1px black;
 }
