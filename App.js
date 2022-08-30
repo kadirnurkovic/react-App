@@ -11,7 +11,8 @@ export default function App() {
   const [page ,setPage] = useState(1)
 
   function getAuthors(page) {
-    axios.get(`${BASE_URL}/authors?sortBy=quoteCount&page=${page}`)
+    setLoading(true)
+    try {axios.get(`${BASE_URL}/authors?sortBy=quoteCount&page=${page}`)
     .then((res) => {
       console.log(res.data.results)
       setPagination({
@@ -19,6 +20,11 @@ export default function App() {
         lastPage: res.data.totalPages
       })
       setAuthors(res.data.results)})
+    }
+    catch (e){ console.log(e) }
+    finally {
+      setLoading(false)
+    }
 
   }
 
@@ -29,7 +35,7 @@ export default function App() {
   return (
     <div className='card-container'>
       
-      {authors.length > 0 ? (
+      {!loading ? (
         <div>
           <div>{pagination.page} / {pagination.lastPage}</div>
           <button onClick={() => setPage((prev) => prev + 1)}>Next</button>
@@ -45,3 +51,5 @@ export default function App() {
     </div>
   )
 }
+
+// https://pastebin.com/XXLuCQiF
