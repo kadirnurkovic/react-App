@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState ,useEffect } from 'react'
+import React, { useState ,useEffect, useRef } from 'react'
 import './App.css'
 import Posts from './components/Posts/Posts'
 
@@ -9,6 +9,8 @@ export default function App() {
   const [loading , setLoading] = useState(false)
   const [pagination, setPagination] = useState({})
   const [page ,setPage] = useState(1)
+
+  
 
   function getAuthors(page) {
     setLoading(true)
